@@ -1,6 +1,7 @@
 /* Box Model Hack */
 * {
   box-sizing: border-box;
+  border: 1px solid black;
 }
 
 /* Clear fix hack */
@@ -17,26 +18,90 @@
 	clear: both;
 }
 
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --font-main: "oswald", serif;
+}
 /******************************************
 /* BASE STYLES
 /*******************************************/
 
-body {
-
+html {
+  font-size: 62.5%;
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+h1, a {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+img {
+  width: 100%;
+  display: inline-block;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  width: fit-content;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+  button {
+    background-color: var(--bg-color)
+  }
+  img {
+    height: 2rem;
+  }
+}
+nav {
+  display: none;
+}
 
+main {
+  padding: 0 5%;
 }
 
 footer {
+  img {
+    height: 2rem;
+  }
+}
 
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+h2, h3, p {
+  text-align: center;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
+/*******************************************/
+
+
+/******************************************
+/* MEDIA QUERIES
 /*******************************************/
