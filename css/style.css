@@ -1,7 +1,7 @@
 /* Box Model Hack */
 * {
   box-sizing: border-box;
-  border: 1px solid black;
+  border: 1px solid purple;
 }
 
 /* Clear fix hack */
@@ -82,19 +82,37 @@ nav {
 
 main {
   padding: 0 5%;
+  & > * {
+    margin: 2rem 0;
+  }
 }
 
 footer {
+  ul {
+  }
   img {
     height: 2rem;
   }
 }
 
+/***************CONTACT PAGE***************/
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
 /******************************************
 /* TYPOGRAPHY
 /*******************************************/
-h2, h3, p {
+h2, h3 {
   text-align: center;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.5rem
 }
 
 /******************************************
