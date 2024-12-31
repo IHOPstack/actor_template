@@ -23,6 +23,11 @@ class simpleHeader extends HTMLElement {
                 </ul>
             </nav>
             <style>
+                h1, a {
+                    font-weight: 400;
+                    padding: 0%;
+                    margin: 0%;
+                }
                 a {
                 color: var(--text-color);
                 text-decoration: none;
@@ -43,7 +48,8 @@ class simpleHeader extends HTMLElement {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 0 1%;
+                padding: 5%;
+                margin: 0%;
                 button {
                     background-color: var(--bg-color)
                 }
@@ -52,7 +58,7 @@ class simpleHeader extends HTMLElement {
                 }
                 }
                 nav {
-                display: none;
+                    display: none;
                 }
             </style>
             `;

@@ -1,7 +1,6 @@
 /* Box Model Hack */
 * {
   box-sizing: border-box;
-  border: 1px solid purple;
 }
 
 /* Clear fix hack */
@@ -40,11 +39,17 @@ body {
 h1, a {
   display: inline-block;
   white-space: nowrap;
+  font-weight: 400;
 }
 
 img {
   width: 100%;
   display: inline-block;
+}
+
+figcaption {
+  text-align: right;
+  font-size: 1.2rem;
 }
 
 a {
@@ -83,7 +88,7 @@ nav {
 main {
   padding: 0 5%;
   & > * {
-    margin: 2rem 0;
+    margin: 32px 0;
   }
 }
 
@@ -100,6 +105,27 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2em;
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+  fieldset {
+    display: flex;
+    label {
+      width: 50%;
+    }
+  }
+  button {
+    width: 25%;
+    aspect-ratio: 2 / 1;
+  }
+}
+
+.representation div {
+  display: flex;
+  flex-direction: column;
+  padding: .8em;
 }
 
 
@@ -111,8 +137,8 @@ h2, h3 {
 }
 
 p {
-  line-height: 1.5;
-  font-size: 1.5rem
+  line-height: 1.6;
+  font-size: 1.6rem
 }
 
 /******************************************
