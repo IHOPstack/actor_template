@@ -107,6 +107,8 @@ form {
   fieldset {
     display: flex;
     justify-content: space-between;
+    margin: 0;
+    padding: 0;
     label {
       width: 48%;
     }
@@ -174,7 +176,22 @@ button[type="submit"]{
 /* ADDITIONAL STYLES
 /*******************************************/
 
+fieldset{
+  border: none;
+}
 
+input, textarea {
+  background-color: #efefef;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  border: 1px solid red;
+  color: red;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+}
 
 /******************************************
 /* MEDIA QUERIES
