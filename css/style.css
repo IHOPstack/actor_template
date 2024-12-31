@@ -36,12 +36,6 @@ body {
   font-family: var(--font-main);
 }
 
-h1, a {
-  display: inline-block;
-  white-space: nowrap;
-  font-weight: 400;
-}
-
 img {
   width: 100%;
   display: inline-block;
@@ -54,8 +48,8 @@ figcaption {
 
 a {
   color: var(--text-color);
-  text-decoration: none;
   width: fit-content;
+  word-wrap: normal;
 }
 
 ul {
@@ -112,9 +106,13 @@ form {
   }
   fieldset {
     display: flex;
+    justify-content: space-between;
     label {
-      width: 50%;
+      width: 48%;
     }
+  }
+  input, textarea {
+    padding: 8px;
   }
   button {
     width: 25%;
@@ -132,8 +130,10 @@ form {
 /******************************************
 /* TYPOGRAPHY
 /*******************************************/
-h2, h3 {
+h2 {
   text-align: center;
+  font-weight: 400;
+  font-size: 2.4rem;
 }
 
 p {
@@ -141,9 +141,39 @@ p {
   font-size: 1.6rem
 }
 
+figcaption {
+  font-weight: 300;
+}
+
+legend, label {
+  font-size: 1.6rem;
+}
+fieldset > label {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+input {
+  font-size: 1.6rem;
+}
+button[type="submit"]{
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.representation{
+  span {
+    font-size: 1.6rem;
+  }
+  span + span {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+}
+
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
 
 
 /******************************************
