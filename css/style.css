@@ -87,10 +87,10 @@ main {
 }
 
 footer {
-  ul {
-  }
+  padding: 5%;
   img {
     height: 2rem;
+    padding: 0 2.5vw;
   }
 }
 
