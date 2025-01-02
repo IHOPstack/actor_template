@@ -7,7 +7,7 @@ class simpleHeader extends HTMLElement {
         header.innerHTML = `
             <h1><a href="#">YOUR NAME</a></h1>
             <button>
-                <img src="assets/icons/triangle-person-digging.svg" alt="burger menu">
+                <img src="assets/icons/fa-menu-bars.svg" alt="burger menu">
             </button>
             <nav>
                 <ul>
@@ -51,7 +51,8 @@ class simpleHeader extends HTMLElement {
                 padding: 5%;
                 margin: 0%;
                 button {
-                    background-color: var(--bg-color)
+                    background-color: var(--bg-color);
+                    border: none;
                 }
                 img {
                     height: 2rem;
