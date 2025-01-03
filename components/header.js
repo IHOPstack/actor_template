@@ -6,19 +6,19 @@ class simpleHeader extends HTMLElement {
 
         header.innerHTML = `
             <h1><a href="#">YOUR NAME</a></h1>
-            <button>
+            <button id="btn-nav">
                 <img src="assets/icons/fa-menu-bars.svg" alt="burger menu">
             </button>
             <nav>
                 <ul>
                     <li>
-                        <a href="#">HOME</a>
+                        <a href="/">HOME</a>
                     </li>
                     <li>
-                        <a href="/contact.html">LIVE SHOWS</a>
+                        <a href="#">LIVE SHOWS</a>
                     </li>
                     <li>
-                        <a href="#">CONTACT</a>
+                        <a href="/contact.html">CONTACT</a>
                     </li>
                 </ul>
             </nav>
@@ -35,43 +35,67 @@ class simpleHeader extends HTMLElement {
                 }
 
                 ul {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                }
-                :host{
-                    display: block;
-                }
-                header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 5%;
-                margin: 0%;
-                button {
-                    background-color: var(--bg-color);
-                    border: none;
-                }
-                img {
-                    height: 2rem;
-                }
-                }
-                nav {
-                    display: none;
-                }
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    height: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    }
+                    li {
+                        font-size: 4rem;
+                        padding: .5em;
+                    }
+                    :host{
+                        display: block;
+                        }
+                        header{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 5%;
+                            margin: 0%;
+                            button {
+                                background-color: var(--bg-color);
+                                border: none;
+                                }
+                            img {
+                                height: 2rem;
+                                }
+                            }
+                            nav {
+                                display: none;
+                                position: absolute;
+                                top: 7.5%;
+                                left: 50%;
+                                transform: TranslateX(-50%);
+                                width: 100%;
+                                height: 100%;
+                                background-color: white;
+                                }
             </style>
             `;
 
         shadow.appendChild(header);
 
-        let css = new CSSStyleSheet();
-        css.replaceSync("@import url(css/style.css)");
+        const buttonNav = shadow.getElementById("btn-nav");
+        buttonNav.addEventListener("click", BtnNavOnClick);
         
-        shadow.adoptedStyleSheets = [css]
-        
-        console.log(`html: ${shadow.innerHTML}`);
+        function BtnNavOnClick() {
+            const navMenu = shadow.querySelector("nav");
+            const navDisplay = window.getComputedStyle(navMenu).display;
+            
+            if (navDisplay == "none") {
+                buttonNav.style.transform = "rotate(90deg)";
+                navMenu.style.display = "block";
+            }
+            else {
+                buttonNav.style.transform = "";
+                navMenu.style.display = "none";
+            }
+        }        
     }
     
 }
