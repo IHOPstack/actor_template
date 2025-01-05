@@ -196,3 +196,33 @@ button[type="submit"] {
 /******************************************
 /* MEDIA QUERIES
 /*******************************************/
+
+@media (min-width: 760px){
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  p {
+    width: 100%;
+  }
+  form {
+    width: 50%;
+  }
+  .representation {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    h2 {
+      width: 100%;
+    }
+    div {
+      width: 50%;
+      span {
+        text-align: center;
+      }
+    }
+  }
+  
+}

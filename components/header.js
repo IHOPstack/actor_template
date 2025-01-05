@@ -75,6 +75,26 @@ class simpleHeader extends HTMLElement {
                                 height: 100%;
                                 background-color: white;
                                 }
+                @media (min-width: 760px) {
+                    h1, a {
+                        text-wrap: nowrap;
+                    }
+                    ul {
+                        flex-direction: row;
+                        justify-content: end;
+                    }
+                    button {
+                        display: none;    
+                    }
+                    nav {
+                        display: inline-block;
+                        position: static;
+                        transform: none;
+                    }
+                    li {
+                        font-size: 2rem;
+                    }
+                }
             </style>
             `;
 
